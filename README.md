@@ -2,7 +2,7 @@
 Simple ASP.NET Web application demonstrating add/view cart functionality using cookies, DataTable and Dictionaries. The main focus of this project is the CookieCartParser class that contains the functions to manipulate the cart in the cookie and the DataTable view in the webforms.
 
 ## What is a CookieCartParser?
-The CookieCartParser is a class which contains functions that are used to manipulate a cookie string specifically a CookieCart string. The class contains the following functions:
+The CookieCartParser is a class which contains functions that are used to manipulate a cookie string, specifically a CookieCart string. The class contains the following functions:
 
 - Dictionary<string, string> ToDictionary(string strCookie)
 
@@ -22,7 +22,7 @@ You can find more details about these functions inside the [CookieCartParser cla
 ## Why was CookieCartParser created?
 The CookieCartParser class was created for my Web Application Development class. One of the features to be integrated in the web application was the **Add to Cart** functionality. We were also required to store the data from our cart into an *HTTPCookie*.
 
-You can store data into your cookie and retrieve it easily using Request.Cookies\["Name of your cookie"\]. For an Add to Cart functionality, you will need to store the item that was added. Cookies are not ideal for large, secured data so it's best to use cookies sparingly and add bits of information on it. So instead of storing all the details of the item, simply store the ID of the item, which we can use to access the details of the item.
+You can store data into your cookie and retrieve it easily using Request.Cookies\["Name of your cookie"\]. For an Add to Cart functionality, you will need to store the item that was added. Cookies are not ideal for large, secured data so it's best to use cookies sparingly and simply add bits of information in it. So instead of storing all the details of the item, we can simply store the ID of the item, which we can then use to access the details of the item.
 
 Most CookieCart as string implementation I've seen online simply adds the item ID each time. So if I have two items with IDs 1 and 2 respectively, and the user clicked item 1 three times then item 2 two times then item 1 again five times, the CookieCart string would look like this:
 
@@ -40,7 +40,13 @@ which basically means, item 1 has been added to the cart 8 times (quantity) and 
 
 It looks easy, right? But accessing the item ID and updating the quantity value with only string manipulation was quite a complex process so I used **Dictionaries** (a.k.a. my favorite Data Structure). To learn more about Dictionaries in C#, click [here](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?redirectedfrom=MSDN&view=netframework-4.8].
 
-So with a Dictionary, I could assign the item ID as the Key and the quantity as the Value. If I need to update the quantity, I can just access it using the item ID. If I need to remove the item, I can just remove it from the Dictionary using the ID. Now, it's easy.
+So with a Dictionary, I could assign the item ID as the Key and the quantity as the Value. If I need to update the quantity, I can just access it using the item ID. 
+
+> dictCookie[1] = 5;
+
+If I need to remove the item, I can just remove it from the Dictionary using the ID. 
+
+> dictCookie.Remove(1);
 
 You might be thinking, "*But wait! Cookies are strings, right? How do we make a string into a Dictionary?*"
 
