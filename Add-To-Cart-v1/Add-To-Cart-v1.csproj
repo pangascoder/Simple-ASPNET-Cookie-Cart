@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="demo\Products.aspx" />
     <Content Include="demo\ViewCart.aspx" />
     <Content Include="Global.asax" />
@@ -74,6 +75,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CookieCartParser.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="demo\AddToCartDemo.Master.cs">
       <DependentUpon>AddToCartDemo.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
