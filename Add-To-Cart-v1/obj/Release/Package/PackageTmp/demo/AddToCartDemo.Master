@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AddToCartDemo.master.cs" Inherits="Add_To_Cart_v1.demo.AddToCartDemo" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Add to Cart Demo</title>
+    <style>
+            #banner {
+                background-color: dimgrey;
+            }
+
+            #banner h1 {
+                text-align: center;
+                color: white;
+            }
+
+            #cart-data {
+                text-align: right;
+            }
+
+            .flex-container {
+                display: flex;
+                height: 300px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                background-color: white;
+                border: 1px solid black;
+                width: 300px;
+                height: 250px;
+                margin: 1em;
+                padding: 1em;
+                text-align: center;
+            }
+      </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="banner">
+            <h1>Add To Cart Demo</h1>
+        </div>
+        <div>
+            <p id="cart-data">Number of Items: <asp:Label runat="server" ID="LblItemNumberinCart"></asp:Label> <a href="ViewCart.aspx">View Cart</a></p>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

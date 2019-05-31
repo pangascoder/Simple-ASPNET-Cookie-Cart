@@ -103,6 +103,7 @@
   <ItemGroup>
     <Content Include="demo\AddToCartDemo.Master" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Add-To-Cart-v120190531034415 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
