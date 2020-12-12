@@ -38,7 +38,7 @@ So I thought of using this pattern:
 which basically means, item 1 has been added to the cart 8 times (quantity) and item 2 has been added to the cart 2 times. If the user clicks item 1 or 2 again, it would simply update the number after the '=' character. If the user clicks a third item with ID 3, it would simple update into:
 > 1=8,2=2,3=1
 
-It looks easy, right? But accessing the item ID and updating the quantity value with only string manipulation was quite a complex process so I used **Dictionaries** (a.k.a. my favorite Data Structure). To learn more about Dictionaries in C#, click [here](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?redirectedfrom=MSDN&view=netframework-4.8].
+It looks easy, right? But accessing the item ID and updating the quantity value with only string manipulation was quite a complex process so I used **Dictionaries** (a.k.a. my favorite Data Structure). To learn more about Dictionaries in C#, click [here](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?redirectedfrom=MSDN&view=netframework-4.8).
 
 So with a Dictionary, I could assign the item ID as the Key and the quantity as the Value. If I need to update the quantity, I can just access it using the item ID. 
 
